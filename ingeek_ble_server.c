@@ -5,7 +5,7 @@
  *          event.
  *
  * @param   
- * @version 0.1
+ * @version 0.2
  * @return  None.
  */
  
@@ -25,10 +25,22 @@
 #define UART_OPERATE_BLE_CONNECT        0x0102
 #define UART_OPERATE_BLE_UNCONNECT      0x0103
 #define UART_OPERATE_CHARACTER_NOTIFY   0x0210
+
+#define UART_SEND_OPERATE_CHARACTER_READ		0x0104
+#define UART_RECEIVE_OPERATE_CHARACTER_READ		0x0204
+
+#define UART_SEND_OPERATE_CHARACTER_WRITE		0x0108
+#define UART_RECEIVE_OPERATE_CHARACTER_WRITE		0x0208
+
+#define UART_SEND_OPERATE_CHARACTER_NOTIFY		0x0110
+#define UART_RECEIVE_OPERATE_CHARACTER_NOTIFY		0x0210
+
+
 #define INFO_UUID       0xF2FF
 #define AUTH_UUID       0xF3FF
 #define SESSION_UUID    0xF4FF
 #define CMD_UUID        0xF5FF
+#define CARSTATE_UUID        0xF6FF
 
 //#define Datalength 1
 
@@ -95,7 +107,7 @@ const Can_FrameType CANCloseDoor={
 * Parameter:   Data  frame_len
 * Return:      uint8_t
 * auther: lifei 
-* change time£º2018/9/10
+* change time 2018/9/11
 */
 uint8_t Handle_Character_A( uint8_t *Data, uint32_t frame_len)
 {

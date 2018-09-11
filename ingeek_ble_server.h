@@ -1,6 +1,9 @@
 #ifndef INGEEK_BLE_SERVER_H
 #define INGEEK_BLE_SERVER_H
-/*version:0.1*/
+/* auth: andy
+ * version:0.2
+ * change time: 2018/9/11
+ * */
 
 #ifdef __cplusplus
 extern "C"
@@ -17,7 +20,6 @@ extern "C"
  * CONSTANTS
  */
 #define SUCCESS 0
-
 
 /*********************************************************************
  * TYPEDEFS

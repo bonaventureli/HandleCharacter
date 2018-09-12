@@ -5,7 +5,7 @@
  *          event.
  *
  * @param   
- * @version 0.2
+ * @version 0.3
  * @return  None.
  */
  
@@ -145,16 +145,30 @@ uint8_t Handle_Character_A( uint8_t *Data, uint32_t frame_len)
 							Handle_session(&Data[7],0x70);
 							break;
 						}
-						case CMD_UUID:
+	/* 					case CMD_UUID:
 						{
 							Handle_cmd(&Data[7],0x10);
 							break;
-						}
+						} */
 						default:
 						break;
 						}
 					break;
 					}
+				case UART_RECEIVE_OPERATE_CHARACTER_WRITE:
+				{
+					switch (Framedata->UUID){
+						case CMD_UUID:{
+							Handle_cmd(&Data[7],0x10);
+							break;
+						}
+						default:
+						break;
+					}
+					break;
+				}
+				default:
+				break;
 			}
 		}
 	}

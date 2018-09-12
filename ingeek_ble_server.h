@@ -1,7 +1,7 @@
 #ifndef INGEEK_BLE_SERVER_H
 #define INGEEK_BLE_SERVER_H
 /* auth: andy
- * version:0.2
+ * version:0.3
  * change time: 2018/9/11
  * */
 
